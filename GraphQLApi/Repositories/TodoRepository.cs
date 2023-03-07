@@ -27,7 +27,7 @@ namespace GraphQLApi.Repositories
         {
             if(!todo.Id.HasValue)
             {
-                todo.Id = new Guid();
+                todo.Id = Guid.NewGuid();
                 _context.Tasks.Add(todo);
             }
             
